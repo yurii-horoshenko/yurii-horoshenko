@@ -180,6 +180,43 @@ My AI agent system automates the full development lifecycle:
 
 ---
 
+## Experience
+
+| Period | Role | Company | Highlights |
+|--------|------|---------|------------|
+| **2024 — Present** | **Founder & Lead Engineer** | **ORBITA** | Built entire marketplace platform: iOS + Android + KMM + C# backend + AI agent system |
+| **2022 — 2024** | **Lead iOS Developer** | [**Grid Dynamics**](https://griddynamics.com) | SwiftUI (+30% dev speed), ARKit/SceneKit (+50% satisfaction), VIP architecture (-60% errors), Stripe, team of 4 |
+| **2020 — 2022** | **Lead iOS Developer** | [**Tranzzo**](https://tranzzo.com) | PassKit digital wallet, Fastlane CI/CD (-50% deploy time), mentored 3 juniors (+30% efficiency) |
+| **2018 — 2020** | **Lead iOS Developer** | [**Lalafo**](https://lalafo.ua) | Performance optimization (-25% API response), RxSwift, 8 feature releases on time |
+| **2011 — 2018** | **Junior → Senior iOS** | **Genesis, Infopulse, Digicode** | Obj-C → Swift migration, Core Animation, WebRTC, XMPP, 4 client projects |
+
+---
+
+## Shipped Apps
+
+<table>
+<tr>
+<td align="center" width="16%"><b>Transflo</b><br><sub>Fuel stations</sub></td>
+<td align="center" width="16%"><b>Container Store</b><br><sub>E-commerce</sub></td>
+<td align="center" width="16%"><b>OxiBank</b><br><sub>Banking</sub></td>
+<td align="center" width="16%"><b>Lalafo</b><br><sub>Marketplace</sub></td>
+<td align="center" width="16%"><b>Hily</b><br><sub>Dating</sub></td>
+<td align="center" width="16%"><b>Vethem</b><br><sub>Veterinary</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.transflo.com">transflo.com</a></td>
+<td align="center"><a href="https://apps.apple.com/us/app/the-containerstore/id1604507002">App Store</a></td>
+<td align="center"><a href="https://apps.apple.com/ua/app/oxibank/id1575737467">App Store</a></td>
+<td align="center"><a href="https://apps.apple.com/us/app/lalafo/id1063347253">App Store</a></td>
+<td align="center"><a href="https://apps.apple.com/ru/app/hily-dating-chat-meetlove/id1250946975">App Store</a></td>
+<td align="center"><a href="https://apps.apple.com/us/app/vethem-en-digitalveterinär/id1410819467">App Store</a></td>
+</tr>
+</table>
+
+<sub>Also: Kidgy (parental control), PlsPlsMe (couples), Live Auction (streaming), Stroovy (dating reviews)</sub>
+
+---
+
 ## GitHub Stats
 
 <div align="center">

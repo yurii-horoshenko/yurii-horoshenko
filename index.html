@@ -3,10 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yurii Horoshenko — Full-Stack Mobile Engineer</title>
-<meta name="description" content="Senior Full-Stack Engineer specializing in iOS, Android, KMM, and .NET Backend. Building production-grade multi-platform apps and AI agent systems.">
+<title>Yurii Horoshenko — Founder & Full-Stack Mobile Engineer</title>
+<meta name="description" content="Founder of VisiTime. Full-Stack Engineer with 14+ years shipping iOS, Android, KMM and .NET backend. Building AI-first development workflows with Claude Code.">
+<meta property="og:title" content="Yurii Horoshenko — Founder of VisiTime">
+<meta property="og:description" content="14+ years of mobile engineering. Founder building a multi-platform booking marketplace and an AI agent factory on top of Claude Code.">
+<meta property="og:type" content="website">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,15 +19,17 @@
     --bg-card: #12121a;
     --bg-card-hover: #1a1a28;
     --text: #e4e4e7;
-    --text-dim: #71717a;
+    --text-dim: #8a8a95;
     --text-bright: #fafafa;
     --accent: #818cf8;
     --accent-2: #a78bfa;
     --accent-3: #c084fc;
+    --accent-green: #22c55e;
     --gradient: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+    --gradient-warm: linear-gradient(135deg, #f472b6, #c084fc);
     --gradient-subtle: linear-gradient(135deg, rgba(129,140,248,0.1), rgba(167,139,250,0.1), rgba(192,132,252,0.1));
     --border: rgba(255,255,255,0.06);
-    --border-hover: rgba(255,255,255,0.12);
+    --border-hover: rgba(255,255,255,0.14);
     --glow: 0 0 80px rgba(129,140,248,0.15);
 }
 
@@ -37,25 +43,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Noise overlay */
 body::before {
     content: '';
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    inset: 0;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
 }
 
-/* Gradient orbs */
-.orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-}
+.orb { position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.15; pointer-events: none; z-index: 0; }
 .orb-1 { width: 600px; height: 600px; background: #818cf8; top: -200px; right: -200px; }
 .orb-2 { width: 500px; height: 500px; background: #c084fc; bottom: 20%; left: -200px; }
 .orb-3 { width: 400px; height: 400px; background: #6366f1; bottom: -100px; right: 20%; }
@@ -69,10 +66,7 @@ nav {
     backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--border);
 }
-nav .container {
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-}
+nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-logo {
     font-weight: 800; font-size: 1.1em; letter-spacing: -0.03em;
     background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -85,12 +79,8 @@ nav .container {
 .nav-links a:hover { color: var(--text-bright); }
 
 /* ===== HERO ===== */
-.hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding: 120px 0 80px;
-}
-.hero-content { max-width: 720px; }
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; }
+.hero-content { max-width: 760px; }
 .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 16px; border-radius: 100px;
@@ -115,7 +105,7 @@ nav .container {
     background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .hero p {
-    font-size: 1.15em; color: var(--text-dim); max-width: 560px;
+    font-size: 1.15em; color: var(--text-dim); max-width: 620px;
     line-height: 1.7; margin-bottom: 40px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -142,10 +132,7 @@ nav .container {
     border-radius: 16px; overflow: hidden;
     margin: -40px 0 80px;
 }
-.stat-item {
-    background: var(--bg-card);
-    padding: 32px 24px; text-align: center;
-}
+.stat-item { background: var(--bg-card); padding: 32px 24px; text-align: center; }
 .stat-item:hover { background: var(--bg-card-hover); }
 .stat-val {
     font-size: 2.2em; font-weight: 800; letter-spacing: -0.03em;
@@ -167,6 +154,33 @@ section { padding: 80px 0; }
 }
 .section-desc { color: var(--text-dim); font-size: 1.05em; max-width: 600px; margin-bottom: 48px; }
 
+/* ===== NOW (current focus) ===== */
+.now-card {
+    background: linear-gradient(135deg, rgba(129,140,248,0.08), rgba(192,132,252,0.04));
+    border: 1px solid rgba(129,140,248,0.2);
+    border-radius: 24px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: center;
+}
+.now-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78em; color: var(--accent); letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 12px;
+}
+.now-card h3 { font-size: 2em; font-weight: 800; color: var(--text-bright); margin-bottom: 12px; letter-spacing: -0.02em; }
+.now-card p { color: var(--text-dim); line-height: 1.7; margin-bottom: 16px; }
+.now-list { list-style: none; display: grid; gap: 12px; }
+.now-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    color: var(--text); font-size: 0.95em;
+}
+.now-list li::before {
+    content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0;
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; }
 .project-card {
@@ -178,8 +192,7 @@ section { padding: 80px 0; }
     position: relative; overflow: hidden;
 }
 .project-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
     background: var(--gradient); opacity: 0; transition: opacity 0.3s;
 }
 .project-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: var(--glow); }
@@ -187,9 +200,10 @@ section { padding: 80px 0; }
 .project-icon {
     width: 48px; height: 48px; border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.5em; margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .project-card h3 { font-size: 1.2em; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; }
+.project-card .project-sub { font-size: 0.82em; color: var(--accent); font-weight: 600; margin-bottom: 12px; letter-spacing: 0.02em; }
 .project-card p { color: var(--text-dim); font-size: 0.9em; line-height: 1.7; margin-bottom: 20px; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag {
@@ -230,10 +244,20 @@ section { padding: 80px 0; }
     background: var(--accent); border: 3px solid var(--bg);
     box-shadow: 0 0 0 2px var(--accent);
 }
-.timeline-date { font-size: 0.78em; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78em; font-weight: 600; color: var(--accent); margin-bottom: 4px;
+}
 .timeline-item h3 { font-size: 1.15em; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
 .timeline-company { font-size: 0.9em; color: var(--text-dim); margin-bottom: 12px; }
-.timeline-item p { color: var(--text-dim); font-size: 0.9em; line-height: 1.7; }
+.timeline-item p { color: var(--text-dim); font-size: 0.92em; line-height: 1.7; }
+.timeline-highlights { list-style: none; margin-top: 10px; display: grid; gap: 6px; }
+.timeline-highlights li {
+    color: var(--text); font-size: 0.88em; padding-left: 16px; position: relative;
+}
+.timeline-highlights li::before {
+    content: '▸'; color: var(--accent); position: absolute; left: 0; top: 0;
+}
 
 /* ===== NUMBERS ===== */
 .numbers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
@@ -250,9 +274,7 @@ section { padding: 80px 0; }
 .number-card .num-label { font-size: 0.82em; color: var(--text-dim); margin-top: 4px; }
 
 /* ===== CONTACT ===== */
-.contact-section {
-    text-align: center; padding: 100px 0;
-}
+.contact-section { text-align: center; padding: 100px 0; }
 .contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
 .contact-link {
     display: inline-flex; align-items: center; gap: 10px;
@@ -277,6 +299,7 @@ footer {
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
     .hero { padding: 100px 0 60px; }
     .projects-grid { grid-template-columns: 1fr; }
+    .now-card { grid-template-columns: 1fr; padding: 28px; gap: 24px; }
 }
 </style>
 </head>
@@ -291,6 +314,7 @@ footer {
     <div class="container">
         <div class="nav-logo">YH</div>
         <ul class="nav-links">
+            <li><a href="#now">Now</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -303,20 +327,20 @@ footer {
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="hero-badge">Available for collaboration</div>
+            <div class="hero-badge">Founder of VisiTime · Building in public</div>
             <h1>
-                I build<br>
-                <span class="gradient">multi-platform</span><br>
-                products
+                Shipping <span class="gradient">multi-platform</span> products<br>
+                with an AI agent factory
             </h1>
             <p>
-                Full-Stack Mobile Engineer with 10+ years of experience.
-                I architect and ship production apps across iOS, Android, and Backend &mdash;
-                from idea to App Store. Currently building AI-powered development workflows.
+                I'm Yurii — a Full-Stack Mobile Engineer with 14+ years in iOS, turned founder.
+                I architect and build end-to-end: iOS, Android, KMM shared core, .NET backend, CI/CD.
+                Today I'm running <strong>VisiTime</strong>, a two-sided booking marketplace for service businesses,
+                and an in-house AI agent factory on top of Claude Code that drives the whole dev pipeline.
             </p>
             <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#projects" class="btn btn-primary">See what I'm building</a>
+                <a href="#contact" class="btn btn-secondary">Get in touch</a>
             </div>
         </div>
     </div>
@@ -326,50 +350,78 @@ footer {
 <div class="container">
     <div class="stats-bar">
         <div class="stat-item">
+            <div class="stat-val">14+</div>
+            <div class="stat-label">Years in Mobile</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-val">4</div>
+            <div class="stat-label">Apps in one Platform</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-val">8</div>
+            <div class="stat-label">iOS Build Targets</div>
+        </div>
+        <div class="stat-item">
             <div class="stat-val">10+</div>
-            <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-val">1300+</div>
-            <div class="stat-label">Git Commits</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-val">3</div>
-            <div class="stat-label">Platforms</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-val">5</div>
-            <div class="stat-label">Languages Supported</div>
+            <div class="stat-label">AI Agents in Prod</div>
         </div>
     </div>
 </div>
+
+<!-- NOW -->
+<section id="now">
+    <div class="container">
+        <div class="now-card">
+            <div>
+                <div class="label">// now — 2026</div>
+                <h3>Building VisiTime</h3>
+                <p>
+                    A booking marketplace for barbershops, beauty salons and service businesses.
+                    Two apps (Client + Business) shipped on iOS and Android from a single KMM core,
+                    backed by an ASP.NET Core 9 API.
+                </p>
+            </div>
+            <ul class="now-list">
+                <li>Two client apps on iOS (8 build targets: Live/Preview/Stage/Demo × 2)</li>
+                <li>Two Android apps sharing a common Compose design system</li>
+                <li>KMM shared module — single source of truth for business logic</li>
+                <li>ASP.NET Core 9 + PostgreSQL + Dapper, deployed via Azure Pipelines</li>
+                <li>AI agent factory built on Claude Code — spec → code → review → QA</li>
+                <li>Linear workflow driven by agents (PM → Architect → Dev → QA)</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <!-- PROJECTS -->
 <section id="projects">
     <div class="container">
         <div class="section-label">Featured Work</div>
         <h2 class="section-title">Projects</h2>
-        <p class="section-desc">Production applications and systems I've architected and built from the ground up.</p>
+        <p class="section-desc">Systems I've architected and shipped end to end.</p>
 
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-icon" style="background: linear-gradient(135deg, #818cf8, #6366f1);">
                     <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
                 </div>
-                <h3>ORBITA Mobile</h3>
+                <h3>VisiTime Mobile</h3>
+                <div class="project-sub">iOS + Android + KMM · 2 apps × 2 platforms</div>
                 <p>
-                    Marketplace platform for discovering and booking salon services.
-                    Dual apps (Client + Business) with 35+ screens each.
-                    Kotlin Multiplatform shared module with 60+ UseCases powering both platforms.
+                    Two-sided booking marketplace. Client and Business apps on iOS (SwiftUI + MVVM, 8 build targets)
+                    and Android (Jetpack Compose + Koin), sharing a KMM core with Koin DI, repositories and use cases.
+                    XcodeGen-managed Xcode projects, Fastlane for releases.
                 </p>
                 <div class="project-tags">
+                    <span class="tag">Swift</span>
                     <span class="tag">SwiftUI</span>
+                    <span class="tag">Kotlin</span>
                     <span class="tag">Jetpack Compose</span>
                     <span class="tag">KMM</span>
+                    <span class="tag">Koin</span>
                     <span class="tag">Ktor</span>
-                    <span class="tag">Room DB</span>
-                    <span class="tag">Firebase</span>
-                    <span class="tag">Stripe</span>
+                    <span class="tag">XcodeGen</span>
+                    <span class="tag">Fastlane</span>
                 </div>
             </div>
 
@@ -377,19 +429,23 @@ footer {
                 <div class="project-icon" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">
                     <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 </div>
-                <h3>ORBITA Backend</h3>
+                <h3>VisiTime Backend</h3>
+                <div class="project-sub">ASP.NET Core 9 · PostgreSQL · Azure</div>
                 <p>
-                    ASP.NET Core 9 REST API serving both mobile apps.
-                    39 controllers, 73 services, PostgreSQL with Dapper ORM.
-                    JWT auth, RFC 9457 error handling, Azure Pipelines CI/CD.
+                    REST API serving both mobile apps. Dapper-based data access with stored procedures,
+                    JWT auth, RFC 9457 problem details, Serilog structured logging, Quartz jobs.
+                    Deployed through Azure Pipelines to visitime.net.
                 </p>
                 <div class="project-tags">
-                    <span class="tag">C# / .NET 9</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">.NET 9</span>
+                    <span class="tag">ASP.NET Core</span>
                     <span class="tag">PostgreSQL</span>
                     <span class="tag">Dapper</span>
-                    <span class="tag">Azure</span>
+                    <span class="tag">Azure Pipelines</span>
                     <span class="tag">JWT</span>
                     <span class="tag">Serilog</span>
+                    <span class="tag">Quartz</span>
                 </div>
             </div>
 
@@ -397,37 +453,40 @@ footer {
                 <div class="project-icon" style="background: linear-gradient(135deg, #c084fc, #9333ea);">
                     <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2-1 3-2 4l-1 1v4h-4v-4l-1-1c-1-1-2-2-2-4a5 5 0 015-5z"/><line x1="10" y1="20" x2="14" y2="20"/></svg>
                 </div>
-                <h3>AI Agents System</h3>
+                <h3>AI Agent Factory</h3>
+                <div class="project-sub">Claude Code · multi-agent orchestration</div>
                 <p>
-                    Multi-agent orchestration platform with 13 specialized AI agents.
-                    Automated development pipeline: BA captures ideas via Telegram,
-                    agents decompose tasks and generate code across 3 platforms in parallel.
+                    Internal agent platform built on Claude Code. Specialized agents — PM, Architect, Backend,
+                    iOS, Android, Reviewer, QA — operate against Linear as the task queue. Idea capture through
+                    Telegram with voice (Whisper), automated decomposition, parallel coding and review.
                 </p>
                 <div class="project-tags">
+                    <span class="tag">Claude Code</span>
                     <span class="tag">Claude Opus</span>
-                    <span class="tag">GPT-4o</span>
-                    <span class="tag">Node.js</span>
+                    <span class="tag">Agent SDK</span>
+                    <span class="tag">Skills</span>
+                    <span class="tag">Linear API</span>
                     <span class="tag">Telegram API</span>
-                    <span class="tag">Shell</span>
-                    <span class="tag">xterm.js</span>
+                    <span class="tag">Whisper</span>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-icon" style="background: linear-gradient(135deg, #f472b6, #db2777);">
-                    <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+                    <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
                 </div>
-                <h3>ORBITA Manager</h3>
+                <h3>VisiTime Content</h3>
+                <div class="project-sub">Content engine for the launch</div>
                 <p>
-                    Project management hub for the ORBITA ecosystem.
-                    53 tasks across 4 platforms with priority tracking,
-                    audit reports, requirements docs, and automated status dashboards.
+                    Marketing and educational content pipeline — evergreen posts, video production,
+                    graphics and capability sheets — powering the go-to-market for VisiTime.
+                    Operated alongside the product workflow dashboards.
                 </p>
                 <div class="project-tags">
-                    <span class="tag">Project Management</span>
-                    <span class="tag">Task Tracking</span>
-                    <span class="tag">Reports</span>
-                    <span class="tag">CI/CD</span>
+                    <span class="tag">Content Ops</span>
+                    <span class="tag">Video</span>
+                    <span class="tag">Brand</span>
+                    <span class="tag">Launch</span>
                 </div>
             </div>
         </div>
@@ -439,7 +498,7 @@ footer {
     <div class="container">
         <div class="section-label">Expertise</div>
         <h2 class="section-title">Technical Skills</h2>
-        <p class="section-desc">A decade of building across the full stack, with deep specialization in mobile platforms.</p>
+        <p class="section-desc">14 years of building across the full stack, with deep specialization in Apple platforms and a strong modern mobile + backend core.</p>
 
         <div class="skills-grid">
             <div class="skill-group">
@@ -450,10 +509,11 @@ footer {
                     <span class="skill-item">UIKit</span>
                     <span class="skill-item">Objective-C</span>
                     <span class="skill-item">Combine</span>
+                    <span class="skill-item">Swift Concurrency</span>
                     <span class="skill-item">XcodeGen</span>
                     <span class="skill-item">Fastlane</span>
-                    <span class="skill-item">CocoaPods</span>
-                    <span class="skill-item">SPM</span>
+                    <span class="skill-item">CocoaPods / SPM</span>
+                    <span class="skill-item">ARKit / SceneKit</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -464,93 +524,61 @@ footer {
                     <span class="skill-item">KMM</span>
                     <span class="skill-item">Koin</span>
                     <span class="skill-item">Ktor</span>
-                    <span class="skill-item">Room</span>
-                    <span class="skill-item">Coroutines</span>
+                    <span class="skill-item">Coroutines / Flow</span>
                     <span class="skill-item">Gradle</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>Backend</h3>
+                <h3>Backend / Data</h3>
                 <div class="skill-items">
                     <span class="skill-item">C#</span>
-                    <span class="skill-item">.NET Core 9</span>
-                    <span class="skill-item">ASP.NET</span>
+                    <span class="skill-item">.NET 9</span>
+                    <span class="skill-item">ASP.NET Core</span>
                     <span class="skill-item">PostgreSQL</span>
                     <span class="skill-item">Dapper</span>
                     <span class="skill-item">REST API</span>
-                    <span class="skill-item">JWT</span>
+                    <span class="skill-item">JWT / OAuth</span>
                     <span class="skill-item">Serilog</span>
+                    <span class="skill-item">Quartz</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>AI / Automation</h3>
+                <h3>AI / Agents</h3>
                 <div class="skill-items">
-                    <span class="skill-item">Claude API</span>
-                    <span class="skill-item">GPT-4o</span>
-                    <span class="skill-item">AI Agents</span>
+                    <span class="skill-item">Claude Code</span>
+                    <span class="skill-item">Claude Opus 4.x</span>
+                    <span class="skill-item">Anthropic SDK</span>
+                    <span class="skill-item">Agent SDK</span>
+                    <span class="skill-item">MCP</span>
+                    <span class="skill-item">Skills</span>
                     <span class="skill-item">Prompt Engineering</span>
-                    <span class="skill-item">LLM Orchestration</span>
+                    <span class="skill-item">GPT-4o</span>
                     <span class="skill-item">Whisper</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>DevOps & Tools</h3>
+                <h3>DevOps / Tools</h3>
                 <div class="skill-items">
                     <span class="skill-item">Azure Pipelines</span>
                     <span class="skill-item">Firebase</span>
                     <span class="skill-item">Git</span>
                     <span class="skill-item">Docker</span>
                     <span class="skill-item">Stripe</span>
-                    <span class="skill-item">Twilio</span>
-                    <span class="skill-item">Google APIs</span>
+                    <span class="skill-item">Linear</span>
+                    <span class="skill-item">Figma</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>Architecture</h3>
+                <h3>Architecture / Craft</h3>
                 <div class="skill-items">
-                    <span class="skill-item">MVVM</span>
+                    <span class="skill-item">MVVM · MVVM-C · VIP</span>
                     <span class="skill-item">Clean Architecture</span>
-                    <span class="skill-item">Layered Architecture</span>
+                    <span class="skill-item">Modular Monolith</span>
                     <span class="skill-item">Dependency Injection</span>
                     <span class="skill-item">Design Systems</span>
-                    <span class="skill-item">API Versioning</span>
+                    <span class="skill-item">Tech Leadership</span>
+                    <span class="skill-item">Mentoring</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- BY THE NUMBERS -->
-<section>
-    <div class="container">
-        <div class="section-label">Impact</div>
-        <h2 class="section-title">By the Numbers</h2>
-        <p class="section-desc">Scale of the systems I've built and maintain.</p>
-
-        <div class="numbers-grid">
-            <div class="number-card">
-                <div class="num">293+</div>
-                <div class="num-label">SwiftUI Views</div>
-            </div>
-            <div class="number-card">
-                <div class="num">440+</div>
-                <div class="num-label">Kotlin Files</div>
-            </div>
-            <div class="number-card">
-                <div class="num">39</div>
-                <div class="num-label">API Controllers</div>
-            </div>
-            <div class="number-card">
-                <div class="num">73</div>
-                <div class="num-label">Backend Services</div>
-            </div>
-            <div class="number-card">
-                <div class="num">13</div>
-                <div class="num-label">AI Agents</div>
-            </div>
-            <div class="number-card">
-                <div class="num">8</div>
-                <div class="num-label">iOS Build Targets</div>
             </div>
         </div>
     </div>
@@ -561,29 +589,76 @@ footer {
     <div class="container">
         <div class="section-label">Career</div>
         <h2 class="section-title">Experience</h2>
-        <p class="section-desc">10+ years building mobile products across industries.</p>
+        <p class="section-desc">From junior iOS developer at Infopulse in 2011 to founder of VisiTime in 2026.</p>
 
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-date">2024 &mdash; Present</div>
-                <h3>Founder & Lead Engineer</h3>
-                <div class="timeline-company">ORBITA Platform</div>
-                <p>
-                    Architected and built an entire marketplace platform from scratch: iOS and Android clients,
-                    business management app, C# backend, KMM shared module, CI/CD pipelines,
-                    and a 13-agent AI development system.
-                </p>
+                <div class="timeline-date">2024 — Present</div>
+                <h3>Founder · Full-Stack Engineer</h3>
+                <div class="timeline-company">VisiTime (previously ORBITA)</div>
+                <p>Building a two-sided booking marketplace and an in-house AI agent factory.</p>
+                <ul class="timeline-highlights">
+                    <li>Architected and shipped iOS + Android + KMM + .NET backend solo</li>
+                    <li>Stood up an AI agent pipeline on Claude Code driving Linear workflow</li>
+                    <li>Azure Pipelines CI/CD, Fastlane releases, multi-target Xcode via XcodeGen</li>
+                </ul>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2014 &mdash; 2024</div>
-                <h3>Lead iOS Developer</h3>
-                <div class="timeline-company">Enterprise &amp; Startup Projects</div>
-                <p>
-                    10 years leading iOS development teams and shipping production apps.
-                    Swift, SwiftUI, Objective-C, UIKit. Mentoring junior developers,
-                    code review, architecture decisions, App Store releases.
-                </p>
+                <div class="timeline-date">2022 — 2024</div>
+                <h3>Team Lead / Senior iOS Developer</h3>
+                <div class="timeline-company">Grid Dynamics</div>
+                <ul class="timeline-highlights">
+                    <li>Led a 4-person iOS team; migrated legacy UIKit features to SwiftUI (+30% delivery speed)</li>
+                    <li>ARKit / SceneKit features, VIP architecture rollout (−60% regression rate)</li>
+                    <li>Stripe, payments integrations, App Store releases</li>
+                </ul>
             </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020 — 2022</div>
+                <h3>Team Lead / Senior iOS Developer</h3>
+                <div class="timeline-company">Tranzzo</div>
+                <ul class="timeline-highlights">
+                    <li>Apple Wallet / PassKit integration, fintech-grade security</li>
+                    <li>Fastlane CI/CD overhaul (−50% deploy time)</li>
+                    <li>Mentored 3 juniors to mid-level</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2018 — 2020</div>
+                <h3>Team Lead / Senior iOS Developer</h3>
+                <div class="timeline-company">Lalafo — AI-powered C2C marketplace</div>
+                <ul class="timeline-highlights">
+                    <li>Performance work (−25% API response time), RxSwift across feature stack</li>
+                    <li>Shipped 8 major feature releases on schedule</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2011 — 2018</div>
+                <h3>Junior → Senior iOS Developer</h3>
+                <div class="timeline-company">Infopulse · Digicode · Mobisoft · Genesis · BoostSolutions</div>
+                <ul class="timeline-highlights">
+                    <li>Objective-C → Swift migrations, Core Animation, WebRTC, XMPP</li>
+                    <li>Shipped products across e-commerce, fintech, dating, logistics, veterinary</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BY THE NUMBERS -->
+<section>
+    <div class="container">
+        <div class="section-label">Shipped Apps</div>
+        <h2 class="section-title">Products I've built</h2>
+        <p class="section-desc">A sample of apps that made it to the App Store across my career.</p>
+
+        <div class="numbers-grid">
+            <div class="number-card"><div class="num">Transflo</div><div class="num-label">Fuel stations</div></div>
+            <div class="number-card"><div class="num">Container Store</div><div class="num-label">E-commerce</div></div>
+            <div class="number-card"><div class="num">OxiBank</div><div class="num-label">Banking</div></div>
+            <div class="number-card"><div class="num">Lalafo</div><div class="num-label">Marketplace</div></div>
+            <div class="number-card"><div class="num">Hily</div><div class="num-label">Dating</div></div>
+            <div class="number-card"><div class="num">Vethem</div><div class="num-label">Veterinary</div></div>
         </div>
     </div>
 </section>
@@ -594,16 +669,24 @@ footer {
         <div class="section-label">Let's Connect</div>
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-desc" style="margin: 0 auto 32px;">
-            Open to collaboration, consulting, and interesting projects.
+            Open to partnerships, advisory, and interesting engineering problems.
         </p>
         <div class="contact-links">
-            <a href="https://linkedin.com/in/yurii-goroshenko" target="_blank" class="contact-link">
+            <a href="https://linkedin.com/in/yurii-horoshenko" target="_blank" class="contact-link">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
             </a>
-            <a href="https://github.com/yurii-goroshenko" target="_blank" class="contact-link">
+            <a href="https://github.com/yurii-horoshenko" target="_blank" class="contact-link">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 GitHub
+            </a>
+            <a href="mailto:yurii.horoshenko@gmail.com" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+                Email
+            </a>
+            <a href="https://visitime.net" target="_blank" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+                VisiTime
             </a>
         </div>
     </div>
@@ -611,7 +694,7 @@ footer {
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Yurii Horoshenko. Built with passion and a lot of code.</p>
+        <p>&copy; 2026 Yurii Horoshenko · Built with SwiftUI energy, Claude Code and a lot of coffee.</p>
     </div>
 </footer>
 

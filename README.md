@@ -2,19 +2,23 @@
 
 # Yurii Horoshenko
 
-### Full-Stack Mobile Engineer
+### Founder of [VisiTime](https://visitime.net) · Full-Stack Mobile Engineer
 
-**10+ years building production apps across iOS, Android & Backend**
+**14+ years shipping iOS, Android, KMM and .NET backend — now building AI-first dev workflows on Claude Code**
 
-I architect and ship multi-platform products from idea to App Store.
-Currently building AI-powered development workflows with 13 specialized agents.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-goroshenko)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yurii-goroshenko)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-horoshenko)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yurii-horoshenko)
+[![VisiTime](https://img.shields.io/badge/VisiTime-818cf8?style=for-the-badge&logo=safari&logoColor=white)](https://visitime.net)
 
 ---
 
 </div>
+
+## Now — 2026
+
+I'm building **VisiTime** — a two-sided booking marketplace for barbershops, beauty salons, and service businesses — and an in-house **AI agent factory** on top of Claude Code that runs the whole dev pipeline: PM → Architect → Backend → iOS → Android → Reviewer → QA, with Linear as the task queue.
+
+---
 
 ## Featured Projects
 
@@ -22,49 +26,55 @@ Currently building AI-powered development workflows with 13 specialized agents.
 <tr>
 <td width="50%" valign="top">
 
-### ORBITA Mobile
-**Marketplace for discovering & booking salon services**
+### VisiTime Mobile
+**Two apps × two platforms, one KMM core**
 
-Dual apps (Client + Business) with 35+ screens each.
-KMM shared module with 60+ UseCases powering iOS & Android.
+Client + Business apps on iOS (SwiftUI + MVVM, 8 build targets)
+and Android (Jetpack Compose + Koin). Shared business logic in a
+Kotlin Multiplatform module with Koin DI and Ktor.
+XcodeGen-managed Xcode projects, Fastlane releases.
 
-`SwiftUI` `Jetpack Compose` `KMM` `Ktor` `Room` `Firebase` `Stripe`
+`Swift` `SwiftUI` `Kotlin` `Compose` `KMM` `Koin` `Ktor` `XcodeGen` `Fastlane`
 
 </td>
 <td width="50%" valign="top">
 
-### ORBITA Backend
-**ASP.NET Core 9 REST API**
+### VisiTime Backend
+**ASP.NET Core 9 · PostgreSQL · Azure**
 
-39 controllers, 73 services, PostgreSQL + Dapper ORM.
-JWT auth, RFC 9457 errors, Azure Pipelines CI/CD.
+REST API powering both mobile apps. Dapper data access with
+stored procedures, JWT auth, RFC 9457 problem details, Serilog
+structured logs, Quartz scheduled jobs. Shipped through Azure
+Pipelines to production.
 
-`C#` `.NET 9` `PostgreSQL` `Dapper` `Azure` `Serilog` `Quartz`
+`C#` `.NET 9` `ASP.NET Core` `PostgreSQL` `Dapper` `Serilog` `Quartz` `Azure Pipelines`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### AI Agents System
-**Multi-agent development orchestration**
+### AI Agent Factory
+**Claude Code · multi-agent orchestration**
 
-13 specialized AI agents automate the dev pipeline:
-BA captures ideas via Telegram + voice, agents decompose
-tasks and generate code across 3 platforms in parallel.
+Internal agent platform built on Claude Code. Specialized agents —
+PM, Architect, Backend, iOS, Android, Reviewer, QA — operate
+against Linear as the task queue. Telegram + Whisper for idea
+capture; parallel coding and review across platforms.
 
-`Claude Opus` `GPT-4o` `Node.js` `Telegram API` `xterm.js`
+`Claude Code` `Claude Opus` `Agent SDK` `Skills` `MCP` `Linear API` `Telegram` `Whisper`
 
 </td>
 <td width="50%" valign="top">
 
-### ORBITA Manager
-**Project management hub**
+### VisiTime Content
+**Go-to-market content engine**
 
-53 tasks across 4 platforms with priority tracking,
-audit reports, requirements docs, status dashboards.
+Content pipeline powering the VisiTime launch — evergreen posts,
+short-form video production, brand graphics, capability sheets,
+and a workflow dashboard. Runs alongside the product workflow.
 
-`Task Tracking` `Reports` `CI/CD` `Cross-platform`
+`Content Ops` `Video` `Brand` `Launch`
 
 </td>
 </tr>
@@ -79,7 +89,7 @@ audit reports, requirements docs, status dashboards.
 <td align="center" width="16%"><b>iOS / Apple</b></td>
 <td align="center" width="16%"><b>Android</b></td>
 <td align="center" width="16%"><b>Backend</b></td>
-<td align="center" width="16%"><b>AI / LLM</b></td>
+<td align="center" width="16%"><b>AI / Agents</b></td>
 <td align="center" width="16%"><b>DevOps</b></td>
 <td align="center" width="16%"><b>Architecture</b></td>
 </tr>
@@ -102,7 +112,6 @@ audit reports, requirements docs, status dashboards.
 ![KMM](https://img.shields.io/badge/KMM-7F52FF?style=flat&logo=kotlin&logoColor=white)
 ![Koin](https://img.shields.io/badge/Koin-F88909?style=flat&logoColor=white)
 ![Ktor](https://img.shields.io/badge/Ktor-087CFA?style=flat&logo=ktor&logoColor=white)
-![Room](https://img.shields.io/badge/Room-3DDC84?style=flat&logo=android&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=flat&logo=gradle&logoColor=white)
 
 </td>
@@ -118,11 +127,12 @@ audit reports, requirements docs, status dashboards.
 </td>
 <td valign="top">
 
-![Claude](https://img.shields.io/badge/Claude-D97706?style=flat&logo=anthropic&logoColor=white)
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97706?style=flat&logo=anthropic&logoColor=white)
+![Agent SDK](https://img.shields.io/badge/Agent_SDK-8B5CF6?style=flat&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-6366F1?style=flat&logoColor=white)
+![Skills](https://img.shields.io/badge/Skills-FF6F61?style=flat&logoColor=white)
 ![GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=flat&logo=openai&logoColor=white)
 ![Whisper](https://img.shields.io/badge/Whisper-412991?style=flat&logo=openai&logoColor=white)
-![Agents](https://img.shields.io/badge/AI_Agents-FF6F61?style=flat&logoColor=white)
-![Prompts](https://img.shields.io/badge/Prompt_Eng-8B5CF6?style=flat&logoColor=white)
 
 </td>
 <td valign="top">
@@ -131,6 +141,7 @@ audit reports, requirements docs, status dashboards.
 ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat&logo=firebase&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat&logo=stripe&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Linear](https://img.shields.io/badge/Linear-5E6AD2?style=flat&logo=linear&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
 </td>
@@ -148,35 +159,22 @@ audit reports, requirements docs, status dashboards.
 
 ---
 
-## By the Numbers
-
-<div align="center">
-
-| 293+ SwiftUI Views | 440+ Kotlin Files | 39 API Controllers | 73 Backend Services | 13 AI Agents | 8 iOS Targets |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| Client + Business apps | KMM + Android | REST endpoints | Business logic | Dev pipeline | 4 ORBITA + 4 Business |
-
-</div>
-
----
-
 ## How I Work
 
 ```
-User Idea  -->  AI BA Agent  -->  Task Decomposition  -->  Architecture Design
-                                                                    |
-                    +-----------------------------------------------+
-                    |                    |                           |
-              DevBackend            DevIOS                    DevAndroid
-              (C# / .NET)        (SwiftUI)              (Jetpack Compose)
-                    |                    |                           |
-                    +-----------------------------------------------+
-                                         |
-                                   Code Review Agent  -->  QA Agent  -->  Done
+Idea  →  PM Agent (Linear)  →  Architect  →  QA test cases
+                                    ↓
+               ┌────────────────────┼────────────────────┐
+               ↓                    ↓                    ↓
+          Backend Dev           iOS Dev             Android Dev
+          (.NET 9)            (SwiftUI)         (Jetpack Compose)
+               ↓                    ↓                    ↓
+               └────────────────────┼────────────────────┘
+                                    ↓
+                            Code Review  →  QA  →  Done
 ```
 
-My AI agent system automates the full development lifecycle:
-**Idea capture** (Telegram + voice) **-->** **Spec generation** **-->** **Task decomposition** **-->** **Parallel coding across 3 platforms** **-->** **Review** **-->** **QA**
+The same workflow runs for solo engineering and when I spin up multiple agents in parallel. Human in the loop at PM, Architect and QA gates.
 
 ---
 
@@ -184,11 +182,11 @@ My AI agent system automates the full development lifecycle:
 
 | Period | Role | Company | Highlights |
 |--------|------|---------|------------|
-| **2024 — Present** | **Founder & Lead Engineer** | **ORBITA** | Built entire marketplace platform: iOS + Android + KMM + C# backend + AI agent system |
-| **2022 — 2024** | **Lead iOS Developer** | [**Grid Dynamics**](https://griddynamics.com) | SwiftUI (+30% dev speed), ARKit/SceneKit (+50% satisfaction), VIP architecture (-60% errors), Stripe, team of 4 |
-| **2020 — 2022** | **Lead iOS Developer** | [**Tranzzo**](https://tranzzo.com) | PassKit digital wallet, Fastlane CI/CD (-50% deploy time), mentored 3 juniors (+30% efficiency) |
-| **2018 — 2020** | **Lead iOS Developer** | [**Lalafo**](https://lalafo.ua) | Performance optimization (-25% API response), RxSwift, 8 feature releases on time |
-| **2011 — 2018** | **Junior → Senior iOS** | **Genesis, Infopulse, Digicode** | Obj-C → Swift migration, Core Animation, WebRTC, XMPP, 4 client projects |
+| **2024 — Present** | **Founder · Full-Stack Engineer** | **VisiTime** (prev. ORBITA) | Shipped iOS + Android + KMM + .NET backend solo · built AI agent factory on Claude Code driving Linear workflow |
+| **2022 — 2024** | **Team Lead / Senior iOS** | [**Grid Dynamics**](https://griddynamics.com) | Led 4-person iOS team · UIKit → SwiftUI (+30% speed) · ARKit/SceneKit · VIP architecture (−60% regressions) |
+| **2020 — 2022** | **Team Lead / Senior iOS** | [**Tranzzo**](https://tranzzo.com) | PassKit wallet · Fastlane CI/CD (−50% deploy time) · mentored 3 juniors |
+| **2018 — 2020** | **Team Lead / Senior iOS** | [**Lalafo**](https://lalafo.ua) | Performance work (−25% API latency) · RxSwift · 8 feature releases on time |
+| **2011 — 2018** | **Junior → Senior iOS** | **Infopulse · Digicode · Mobisoft · Genesis · BoostSolutions** | Obj-C → Swift migrations · Core Animation · WebRTC · XMPP · multi-industry |
 
 ---
 
@@ -213,7 +211,7 @@ My AI agent system automates the full development lifecycle:
 </tr>
 </table>
 
-<sub>Also: Kidgy (parental control), PlsPlsMe (couples), Live Auction (streaming), Stroovy (dating reviews)</sub>
+<sub>Also: Kidgy (parental control), PlsPlsMe (couples), Live Auction (streaming), Stroovy (dating reviews).</sub>
 
 ---
 
@@ -221,11 +219,9 @@ My AI agent system automates the full development lifecycle:
 
 <div align="center">
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yurii-goroshenko&theme=github_dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yurii-horoshenko&theme=github_dark)
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yurii-goroshenko&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" width="400">
-
-![](https://github-profile-trophy.vercel.app/?username=yurii-goroshenko&theme=darkhub&no-frame=true&row=1&column=6&margin-w=12)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yurii-horoshenko&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" width="400">
 
 </div>
 
@@ -233,10 +229,9 @@ My AI agent system automates the full development lifecycle:
 
 <div align="center">
 
-**Open to collaboration, consulting, and interesting projects.**
+**Open to partnerships, advisory, and interesting engineering problems.**
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-goroshenko)
-
-![](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fyurii-goroshenko&countColor=%236366f1&style=flat-square)
+[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-horoshenko)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yurii.horoshenko@gmail.com)
 
 </div>

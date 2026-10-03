@@ -1,227 +1,199 @@
 <div align="center">
 
-# Yurii Horoshenko
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:7C3AED&height=190&section=header&text=Yurii%20Horoshenko&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Lead%20iOS%20%2F%20Mobile%20Engineer%20%C2%B7%20AI-Assisted%20Development&descAlignY=58&descSize=17" width="100%" alt="Yurii Horoshenko"/>
 
-### Founder of [VisiTime](https://visitime.net) · Full-Stack Mobile Engineer
+<a href="https://github.com/yurii-horoshenko">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1200&color=6366F1&center=true&vCenter=true&width=640&lines=15+years+shipping+iOS+apps+in+Swift+%26+SwiftUI;Building+Argoforge+%E2%80%94+a+home+for+AI+coding+agents;Founder+of+VisiTime+%E2%80%94+4+apps+on+one+KMM+core;Shipped+an+EMV-certified+contactless+payment+SDK" alt="Typing SVG"/>
+</a>
 
-**14+ years shipping iOS, Android, KMM and .NET backend — now building AI-first dev workflows on Claude Code**
+<br/>
 
+[![CV](https://img.shields.io/badge/Download_CV-4F46E5?style=for-the-badge&logo=readdotcv&logoColor=white)](./Yurii_Horoshenko_CV.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-horoshenko)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yurii-horoshenko)
-[![VisiTime](https://img.shields.io/badge/VisiTime-818cf8?style=for-the-badge&logo=safari&logoColor=white)](https://visitime.net)
-
----
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yurii.horoshenko@gmail.com)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/gi_part)
+[![VisiTime](https://img.shields.io/badge/VisiTime-7C3AED?style=for-the-badge&logo=safari&logoColor=white)](https://visitime.net)
 
 </div>
 
-## Now — 2026
+## 👋 About me
 
-I'm building **VisiTime** — a two-sided booking marketplace for barbershops, beauty salons, and service businesses — and an in-house **AI agent factory** on top of Claude Code that runs the whole dev pipeline: PM → Architect → Backend → iOS → Android → Reviewer → QA, with Linear as the task queue.
+```swift
+struct Yurii: Engineer {
+    let role       = "Lead iOS / Mobile Engineer"
+    let experience = "15 years · since 2011"
+    let building   = ["Argoforge — environment for AI coding agents", "VisiTime — booking marketplace"]
+    let previously = "Contactless payment SDK (EMV · NFC · Visa · Mastercard) @ Grid Dynamics"
+    let stack      = ["Swift", "SwiftUI", "Kotlin Multiplatform", "Compose", ".NET", "Elixir"]
+    let leadership = "Teams of 3–5 engineers · mentoring · CI/CD · architecture"
+    let location   = "Wrocław, Poland 🇵🇱 · open to remote"
+}
+```
 
----
+<table>
+<tr>
+<td align="center" width="25%"><h3>15</h3><sub>years in mobile</sub></td>
+<td align="center" width="25%"><h3>280+</h3><sub>unit tests in a certified payment SDK</sub></td>
+<td align="center" width="25%"><h3>−60%</h3><sub>app errors after VIP architecture</sub></td>
+<td align="center" width="25%"><h3>−50%</h3><sub>deployment time with Fastlane</sub></td>
+</tr>
+</table>
 
-## Featured Projects
+## 🚀 Featured work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### VisiTime Mobile
-**Two apps × two platforms, one KMM core**
+### 🧠 [Argoforge](https://github.com/yurii-horoshenko/Argoforge) · Open source
+**Model-agnostic environment for AI coding agents**
 
-Client + Business apps on iOS (SwiftUI + MVVM, 8 build targets)
-and Android (Jetpack Compose + Koin). Shared business logic in a
-Kotlin Multiplatform module with Koin DI and Ktor.
-XcodeGen-managed Xcode projects, Fastlane releases.
+Picks the right agents and skills for each task, analyses past
+sessions and turns repeated mistakes into enforceable rules.
+10 modules with self-tests, Claude Code hooks, and a native
+SwiftUI menu-bar app for macOS.
 
-`Swift` `SwiftUI` `Kotlin` `Compose` `KMM` `Koin` `Ktor` `XcodeGen` `Fastlane`
+`Node.js` `Claude Code` `Skills` `Hooks` `MCP` `SwiftUI (macOS)`
 
 </td>
 <td width="50%" valign="top">
 
-### VisiTime Backend
-**ASP.NET Core 9 · PostgreSQL · Azure**
+### 📅 [VisiTime](https://visitime.net) · Founder
+**Booking marketplace for barbershops and salons**
 
-REST API powering both mobile apps. Dapper data access with
-stored procedures, JWT auth, RFC 9457 problem details, Serilog
-structured logs, Quartz scheduled jobs. Shipped through Azure
-Pipelines to production.
+Four native apps — Client and Business on **iOS (SwiftUI)**
+and **Android (Compose)** — on a shared **Kotlin Multiplatform**
+core. Backend on **.NET 10 + PostgreSQL** with **Phoenix
+LiveView** portals and Stripe billing, co-built with a partner.
 
-`C#` `.NET 9` `ASP.NET Core` `PostgreSQL` `Dapper` `Serilog` `Quartz` `Azure Pipelines`
+`SwiftUI` `Compose` `KMM` `Ktor` `Koin` `.NET 10` `Elixir` `Stripe`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### AI Agent Factory
-**Claude Code · multi-agent orchestration**
+### 💳 iOS Payment SDK · Grid Dynamics <sub>2024–2026</sub>
+**Enterprise SDK for contactless payments**
 
-Internal agent platform built on Claude Code. Specialized agents —
-PM, Architect, Backend, iOS, Android, Reviewer, QA — operate
-against Linear as the task queue. Telegram + Whisper for idea
-capture; parallel coding and review across platforms.
+Host Card Emulation for NFC payments, a full EMV kernel
+(TLV/BER-TLV, APDU, cryptograms, ODA, CVM), crypto on
+Secure Enclave and Keychain. Multi-module SDK shipped as
+XCFramework through Fastlane. **EMV L1/L2, Mastercard MCBP
+and Visa VCBP certified.**
 
-`Claude Code` `Claude Opus` `Agent SDK` `Skills` `MCP` `Linear API` `Telegram` `Whisper`
+`Swift` `CryptoKit` `Secure Enclave` `NFC/HCE` `swift-testing` `Cucumber BDD`
 
 </td>
 <td width="50%" valign="top">
 
-### VisiTime Content
-**Go-to-market content engine**
+### 🤖 AI agent pipeline
+**How VisiTime gets built**
 
-Content pipeline powering the VisiTime launch — evergreen posts,
-short-form video production, brand graphics, capability sheets,
-and a workflow dashboard. Runs alongside the product workflow.
+A team of specialised agents on Claude Code works through
+Linear as a task queue — product, architecture, three
+platforms, review and QA — with a human deciding at
+the planning and acceptance gates.
 
-`Content Ops` `Video` `Brand` `Launch`
+`Claude Code` `Multi-agent` `Linear` `Code review` `QA`
 
 </td>
 </tr>
 </table>
 
----
+```mermaid
+flowchart LR
+    I([💡 Idea]) --> PM[PM agent<br/>Linear]
+    PM --> A[Architect]
+    A --> B[Backend<br/>.NET · Elixir]
+    A --> iOS[iOS<br/>SwiftUI]
+    A --> And[Android<br/>Compose]
+    B & iOS & And --> R[Code review]
+    R --> QA[QA] --> D([✅ Done])
+```
 
-## Tech Stack
+## 🛠 Tech stack
+
+<div align="center">
+
+**Mobile**<br/>
+<img src="https://skillicons.dev/icons?i=swift,apple,kotlin,androidstudio,figma&perline=8" alt="Mobile"/>
+
+**Backend & delivery**<br/>
+<img src="https://skillicons.dev/icons?i=dotnet,cs,elixir,postgres,nodejs,firebase,azure,docker,githubactions,git&perline=10" alt="Backend"/>
+
+<br/>
+
+![SwiftUI](https://img.shields.io/badge/SwiftUI-007AFF?style=flat-square&logo=swift&logoColor=white)
+![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin_Multiplatform-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)
+![Phoenix](https://img.shields.io/badge/Phoenix_LiveView-FD4F00?style=flat-square&logo=phoenixframework&logoColor=white)
+![Fastlane](https://img.shields.io/badge/Fastlane-00F200?style=flat-square&logo=fastlane&logoColor=black)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-111827?style=flat-square&logo=anthropic&logoColor=white)
+![Linear](https://img.shields.io/badge/Linear-5E6AD2?style=flat-square&logo=linear&logoColor=white)
+
+</div>
+
+<details>
+<summary><b>Full skill list</b></summary>
+
+| Area | Skills |
+|------|--------|
+| **iOS** | Swift 6, SwiftUI, UIKit, Objective-C, async/await, Actors, @Observable, Combine, SwiftData, Core Data |
+| **Payments & security** | EMV L1/L2, HCE/NFC, Mastercard MCBP, Visa VCBP, CryptoKit, Secure Enclave, Keychain, App Attest, PassKit, ixGuard |
+| **Cross-platform** | Kotlin Multiplatform, Kotlin 2.2, Jetpack Compose, Ktor, Koin, Coroutines |
+| **Backend** | C# / .NET, ASP.NET Core, PostgreSQL, Elixir / Phoenix LiveView, Stripe, REST, OpenAPI |
+| **Architecture** | Clean Architecture, MVVM, VIP / VIPER, multi-module SDKs, protocol-oriented design, SOLID |
+| **Delivery** | Fastlane, XcodeGen, SwiftLint, Sourcery, GitHub Actions, Jenkins, Artifactory |
+| **Testing** | swift-testing, XCTest, Cucumber / Gherkin BDD, Appium |
+| **AI engineering** | Claude Code, multi-agent workflows, custom skills and hooks, MCP, Cline, Aider, Copilot |
+
+</details>
+
+## 💼 Experience
+
+| | Role | Company | Highlights |
+|---|------|---------|------------|
+| **2026 — now** | Author | [Argoforge](https://github.com/yurii-horoshenko/Argoforge) | Open-source environment for AI coding agents · 10 modules · Claude Code hooks · SwiftUI macOS app |
+| **2023 — now** | Founder · Lead Mobile | [VisiTime](https://visitime.net) | 4 native apps on a KMM core · .NET + Phoenix backend · AI agent pipeline |
+| **2024 — 2026** | Senior iOS Developer | [Grid Dynamics](https://griddynamics.com) | Contactless payment SDK · EMV kernel · HCE/NFC · EMV, MCBP and VCBP certification · 280+ tests |
+| **2023 — 2024** | Senior iOS Developer | Grid Dynamics → Transflo | Logistics and trucking platform, staff augmentation |
+| **2022 — 2023** | Lead iOS Developer | Grid Dynamics | Team of 4 · SwiftUI (+30% speed) · VIP (−60% errors) · ARKit · Stripe |
+| **2020 — 2022** | Lead iOS Developer | [Tranzzo](https://tranzzo.com) | OxiBank · PassKit wallet · Fastlane (−50% deploy time) · mentoring |
+| **2018 — 2020** | Lead iOS Developer | [Lalafo](https://lalafo.ua) | −25% API latency · RxSwift + Realm · 8 on-time releases |
+| **2011 — 2018** | iOS Developer | Infopulse · Digicode · Mobisoft · Genesis · BoostSolutions | Obj-C → Swift · Core Animation · WebRTC · XMPP · live streaming |
+
+<div align="center">
+
+📄 **[Download the full CV (PDF)](./Yurii_Horoshenko_CV.pdf)**
+
+</div>
+
+## 📱 Shipped apps
 
 <table>
 <tr>
-<td align="center" width="16%"><b>iOS / Apple</b></td>
-<td align="center" width="16%"><b>Android</b></td>
-<td align="center" width="16%"><b>Backend</b></td>
-<td align="center" width="16%"><b>AI / Agents</b></td>
-<td align="center" width="16%"><b>DevOps</b></td>
-<td align="center" width="16%"><b>Architecture</b></td>
-</tr>
-<tr>
-<td valign="top">
-
-![Swift](https://img.shields.io/badge/Swift-F54A2A?style=flat&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-007AFF?style=flat&logo=swift&logoColor=white)
-![UIKit](https://img.shields.io/badge/UIKit-2396F3?style=flat&logo=apple&logoColor=white)
-![Obj-C](https://img.shields.io/badge/Obj--C-438EFF?style=flat&logo=apple&logoColor=white)
-![XcodeGen](https://img.shields.io/badge/XcodeGen-147EFB?style=flat&logo=xcode&logoColor=white)
-![Fastlane](https://img.shields.io/badge/Fastlane-00F200?style=flat&logo=fastlane&logoColor=white)
-![CocoaPods](https://img.shields.io/badge/CocoaPods-EE3322?style=flat&logo=cocoapods&logoColor=white)
-
-</td>
-<td valign="top">
-
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)
-![Compose](https://img.shields.io/badge/Compose-4285F4?style=flat&logo=jetpackcompose&logoColor=white)
-![KMM](https://img.shields.io/badge/KMM-7F52FF?style=flat&logo=kotlin&logoColor=white)
-![Koin](https://img.shields.io/badge/Koin-F88909?style=flat&logoColor=white)
-![Ktor](https://img.shields.io/badge/Ktor-087CFA?style=flat&logo=ktor&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-02303A?style=flat&logo=gradle&logoColor=white)
-
-</td>
-<td valign="top">
-
-![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=dotnet&logoColor=white)
-![.NET 9](https://img.shields.io/badge/.NET_9-512BD4?style=flat&logo=dotnet&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
-![Dapper](https://img.shields.io/badge/Dapper-1E1E1E?style=flat&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
-![Serilog](https://img.shields.io/badge/Serilog-2B2D42?style=flat&logoColor=white)
-
-</td>
-<td valign="top">
-
-![Claude Code](https://img.shields.io/badge/Claude_Code-D97706?style=flat&logo=anthropic&logoColor=white)
-![Agent SDK](https://img.shields.io/badge/Agent_SDK-8B5CF6?style=flat&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-6366F1?style=flat&logoColor=white)
-![Skills](https://img.shields.io/badge/Skills-FF6F61?style=flat&logoColor=white)
-![GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=flat&logo=openai&logoColor=white)
-![Whisper](https://img.shields.io/badge/Whisper-412991?style=flat&logo=openai&logoColor=white)
-
-</td>
-<td valign="top">
-
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat&logo=firebase&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat&logo=stripe&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Linear](https://img.shields.io/badge/Linear-5E6AD2?style=flat&logo=linear&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-
-</td>
-<td valign="top">
-
-![MVVM](https://img.shields.io/badge/MVVM-6366F1?style=flat&logoColor=white)
-![Clean](https://img.shields.io/badge/Clean_Arch-10B981?style=flat&logoColor=white)
-![DI](https://img.shields.io/badge/DI-F59E0B?style=flat&logoColor=white)
-![REST](https://img.shields.io/badge/REST_API-EF4444?style=flat&logoColor=white)
-![Design System](https://img.shields.io/badge/Design_System-EC4899?style=flat&logoColor=white)
-
-</td>
-</tr>
-</table>
-
----
-
-## How I Work
-
-```
-Idea  →  PM Agent (Linear)  →  Architect  →  QA test cases
-                                    ↓
-               ┌────────────────────┼────────────────────┐
-               ↓                    ↓                    ↓
-          Backend Dev           iOS Dev             Android Dev
-          (.NET 9)            (SwiftUI)         (Jetpack Compose)
-               ↓                    ↓                    ↓
-               └────────────────────┼────────────────────┘
-                                    ↓
-                            Code Review  →  QA  →  Done
-```
-
-The same workflow runs for solo engineering and when I spin up multiple agents in parallel. Human in the loop at PM, Architect and QA gates.
-
----
-
-## Experience
-
-| Period | Role | Company | Highlights |
-|--------|------|---------|------------|
-| **2024 — Present** | **Founder · Full-Stack Engineer** | **VisiTime** (prev. ORBITA) | Shipped iOS + Android + KMM + .NET backend solo · built AI agent factory on Claude Code driving Linear workflow |
-| **2022 — 2024** | **Team Lead / Senior iOS** | [**Grid Dynamics**](https://griddynamics.com) | Led 4-person iOS team · UIKit → SwiftUI (+30% speed) · ARKit/SceneKit · VIP architecture (−60% regressions) |
-| **2020 — 2022** | **Team Lead / Senior iOS** | [**Tranzzo**](https://tranzzo.com) | PassKit wallet · Fastlane CI/CD (−50% deploy time) · mentored 3 juniors |
-| **2018 — 2020** | **Team Lead / Senior iOS** | [**Lalafo**](https://lalafo.ua) | Performance work (−25% API latency) · RxSwift · 8 feature releases on time |
-| **2011 — 2018** | **Junior → Senior iOS** | **Infopulse · Digicode · Mobisoft · Genesis · BoostSolutions** | Obj-C → Swift migrations · Core Animation · WebRTC · XMPP · multi-industry |
-
----
-
-## Shipped Apps
-
-<table>
-<tr>
-<td align="center" width="16%"><b>Transflo</b><br><sub>Fuel stations</sub></td>
-<td align="center" width="16%"><b>Container Store</b><br><sub>E-commerce</sub></td>
-<td align="center" width="16%"><b>OxiBank</b><br><sub>Banking</sub></td>
-<td align="center" width="16%"><b>Lalafo</b><br><sub>Marketplace</sub></td>
-<td align="center" width="16%"><b>Hily</b><br><sub>Dating</sub></td>
-<td align="center" width="16%"><b>Vethem</b><br><sub>Veterinary</sub></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.transflo.com">transflo.com</a></td>
-<td align="center"><a href="https://apps.apple.com/us/app/the-containerstore/id1604507002">App Store</a></td>
-<td align="center"><a href="https://apps.apple.com/ua/app/oxibank/id1575737467">App Store</a></td>
-<td align="center"><a href="https://apps.apple.com/us/app/lalafo/id1063347253">App Store</a></td>
-<td align="center"><a href="https://apps.apple.com/ru/app/hily-dating-chat-meetlove/id1250946975">App Store</a></td>
-<td align="center"><a href="https://apps.apple.com/us/app/vethem-en-digitalveterinär/id1410819467">App Store</a></td>
+<td align="center" width="16%"><b>Transflo</b><br><sub>Logistics</sub><br><a href="https://www.transflo.com">transflo.com</a></td>
+<td align="center" width="16%"><b>Container Store</b><br><sub>E-commerce</sub><br><a href="https://apps.apple.com/us/app/the-containerstore/id1604507002">App Store</a></td>
+<td align="center" width="16%"><b>OxiBank</b><br><sub>Banking</sub><br><a href="https://apps.apple.com/ua/app/oxibank/id1575737467">App Store</a></td>
+<td align="center" width="16%"><b>Lalafo</b><br><sub>Marketplace</sub><br><a href="https://apps.apple.com/us/app/lalafo/id1063347253">App Store</a></td>
+<td align="center" width="16%"><b>Hily</b><br><sub>Dating</sub><br><a href="https://apps.apple.com/ru/app/hily-dating-chat-meetlove/id1250946975">App Store</a></td>
+<td align="center" width="16%"><b>Vethem</b><br><sub>Veterinary</sub><br><a href="https://apps.apple.com/us/app/vethem-en-digitalveterinär/id1410819467">App Store</a></td>
 </tr>
 </table>
 
 <sub>Also: Kidgy (parental control), PlsPlsMe (couples), Live Auction (streaming), Stroovy (dating reviews).</sub>
 
----
-
-## GitHub Stats
+## 📊 GitHub stats
 
 <div align="center">
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yurii-horoshenko&theme=github_dark)
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=yurii-horoshenko&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true" alt="GitHub stats"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yurii-horoshenko&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yurii-horoshenko&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" width="400">
+<img src="https://streak-stats.demolab.com?user=yurii-horoshenko&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
 
 </div>
 
@@ -229,9 +201,8 @@ The same workflow runs for solo engineering and when I spin up multiple agents i
 
 <div align="center">
 
-**Open to partnerships, advisory, and interesting engineering problems.**
+**Open to lead mobile roles, payment / fintech SDK work and AI-assisted engineering.**
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-horoshenko)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yurii.horoshenko@gmail.com)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,100:4F46E5&height=110&section=footer" width="100%" alt=""/>
 
 </div>

@@ -12,3 +12,8 @@ career-ops/
 
 # ai-job-search: second job-search workspace (own git clone, private data after /setup)
 ai-job-search/
+
+# Local agent tooling (Argoforge, Codex, agent skills): per-machine, not part of the resume
+.agents/
+.codex/
+.argoforge/

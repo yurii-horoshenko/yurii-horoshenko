@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:7C3AED&height=190&section=header&text=Yurii%20Horoshenko&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Lead%20iOS%20%2F%20Mobile%20Engineer%20%C2%B7%20AI-Assisted%20Development&descAlignY=58&descSize=17" width="100%" alt="Yurii Horoshenko"/>
 
 <a href="https://github.com/yurii-horoshenko">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1200&color=6366F1&center=true&vCenter=true&width=640&lines=15+years+shipping+iOS+apps+in+Swift+%26+SwiftUI;Building+Argoforge+%E2%80%94+a+home+for+AI+coding+agents;Founder+of+VisiTime+%E2%80%94+4+apps+on+one+KMM+core;Shipped+an+EMV-certified+contactless+payment+SDK" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1200&color=6366F1&center=true&vCenter=true&width=640&lines=15+years+shipping+iOS+apps+in+Swift+%26+SwiftUI;Founder+of+Argoforge+%E2%80%94+a+team+lead+for+your+AI+coding+agents;Founder+of+VisiTime+%E2%80%94+4+apps+on+one+KMM+core;Shipped+an+EMV-certified+contactless+payment+SDK" alt="Typing SVG"/>
 </a>
 
 <br/>
@@ -12,6 +12,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yurii-horoshenko)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yurii.horoshenko@gmail.com)
 [![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/gi_part)
+[![Argoforge](https://img.shields.io/badge/Argoforge-argoforge.app-111827?style=for-the-badge&logo=anthropic&logoColor=white)](https://argoforge.app)
 [![VisiTime](https://img.shields.io/badge/VisiTime-7C3AED?style=for-the-badge&logo=safari&logoColor=white)](https://visitime.net)
 
 </div>
@@ -22,7 +23,7 @@
 struct Yurii: Engineer {
     let role       = "Lead iOS / Mobile Engineer"
     let experience = "15 years · since 2011"
-    let building   = ["Argoforge — environment for AI coding agents", "VisiTime — booking marketplace"]
+    let building   = ["Argoforge — a team lead for AI coding agents (argoforge.app)", "VisiTime — booking marketplace"]
     let previously = "Contactless payment SDK (EMV · NFC · Visa · Mastercard) @ Grid Dynamics"
     let stack      = ["Swift", "SwiftUI", "Kotlin Multiplatform", "Compose", ".NET", "Elixir"]
     let leadership = "Teams of 3–5 engineers · mentoring · CI/CD · architecture"
@@ -45,15 +46,18 @@ struct Yurii: Engineer {
 <tr>
 <td width="50%" valign="top">
 
-### 🧠 [Argoforge](https://github.com/yurii-horoshenko/Argoforge) · Open source
-**Model-agnostic environment for AI coding agents**
+### 🧠 [Argoforge](https://argoforge.app) · Founder · [argoforge.app](https://argoforge.app)
+**A team lead for your AI coding agents**
 
-Picks the right agents and skills for each task, analyses past
-sessions and turns repeated mistakes into enforceable rules.
-10 modules with self-tests, Claude Code hooks, and a native
-SwiftUI menu-bar app for macOS.
+A layer on top of Claude Code and Codex: turns an agent's repeated
+mistakes into rules and brings each one into the turn that needs it,
+sizes the task, assembles the team of subagents, skills and MCP
+servers, and tracks what every turn costs. Your code stays on your
+Mac. Ten modules, a Node.js server and a native SwiftUI menu-bar
+app for macOS; Starter / Pro / Team plans.
+[Website](https://argoforge.app) · [How it works](https://argoforge.app/#how)
 
-`Node.js` `Claude Code` `Skills` `Hooks` `MCP` `SwiftUI (macOS)`
+`Node.js` `Claude Code` `Codex` `Hooks` `MCP` `SwiftUI (macOS)`
 
 </td>
 <td width="50%" valign="top">
@@ -156,7 +160,7 @@ flowchart LR
 
 | | Role | Company | Highlights |
 |---|------|---------|------------|
-| **2026 — now** | Author | [Argoforge](https://github.com/yurii-horoshenko/Argoforge) | Open-source environment for AI coding agents · 10 modules · Claude Code hooks · SwiftUI macOS app |
+| **2026 — now** | Founder · Author | [Argoforge](https://argoforge.app) | Product for AI coding agents (Claude Code, Codex) · rules from repeated mistakes · 10 modules · Node.js server · SwiftUI macOS app · paid plans |
 | **2023 — now** | Founder · Lead Mobile | [VisiTime](https://visitime.net) | 4 native apps on a KMM core · .NET + Phoenix backend · AI agent pipeline |
 | **2024 — 2026** | Senior iOS Developer | [Grid Dynamics](https://griddynamics.com) | Contactless payment SDK · EMV kernel · HCE/NFC · EMV, MCBP and VCBP certification · 280+ tests |
 | **2023 — 2024** | Senior iOS Developer | Grid Dynamics → Transflo | Logistics and trucking platform, staff augmentation |

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Yurii Horoshenko — CV</title>
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 8.6pt; line-height: 1.38; color: #111; }
+.page { position: relative; width: 210mm; height: 297mm; padding: 0 15mm; page-break-after: always; overflow: hidden; border-top: 2.2mm solid #4f46e5; }
+.page:last-child { page-break-after: auto; }
+.inner { padding-top: 8mm; }
+h1 { font-size: 21pt; font-weight: 700; letter-spacing: -0.3pt; line-height: 1.1; }
+.role { color: #4f46e5; font-weight: 700; font-size: 10.5pt; margin-top: 1.2mm; }
+.contact { color: #777; font-size: 7.6pt; margin-top: 2mm; }
+.contact span { margin: 0 1.2mm; color: #bbb; }
+h2 { color: #4f46e5; font-size: 8.8pt; font-weight: 700; letter-spacing: 0.3pt; text-transform: uppercase; margin: 4.2mm 0 1.8mm; padding-bottom: 0.6mm; border-bottom: 0.3mm solid #ddd; }
+.skills { display: grid; grid-template-columns: 38mm 1fr; row-gap: 1.1mm; }
+.skills b { font-weight: 700; }
+.job { margin-top: 3.8mm; }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+.title { font-weight: 700; font-size: 9.2pt; }
+.title i { font-style: normal; color: #4f46e5; }
+.date { color: #666; font-weight: 700; font-size: 7.8pt; white-space: nowrap; }
+.sub { color: #777; font-size: 8pt; margin-top: 0.3mm; }
+ul { list-style: none; margin-top: 1.2mm; }
+li { position: relative; padding-left: 3.2mm; margin-top: 0.7mm; }
+li::before { content: "•"; position: absolute; left: 0.5mm; }
+.tags { color: #888; font-size: 7.6pt; margin-top: 1.4mm; }
+.foot { position: absolute; bottom: 8mm; right: 15mm; color: #999; font-size: 7.4pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 1mm; }
+.two b { display: block; }
+.dim { color: #777; }
+</style></head><body>
+
+<div class="page"><div class="inner">
+<h1>Yurii Horoshenko</h1>
+<div class="role">Lead iOS / Mobile Engineer · AI-Assisted Development</div>
+<div class="contact">yurii.horoshenko@gmail.com<span>·</span>linkedin.com/in/yurii-horoshenko<span>·</span>github.com/yurii-horoshenko<span>·</span>argoforge.app<span>·</span>Telegram @gi_part<span>·</span>Wrocław, Poland</div>
+
+<h2>Summary</h2>
+<p>Lead iOS engineer with <b>15 years</b> of shipping mobile products in Swift, SwiftUI and Objective-C, now working across the stack with <b>Kotlin Multiplatform</b>, Android and backend. I founded <b>VisiTime</b>, a booking marketplace with four native apps on a shared KMM core, and I develop <b>Argoforge</b> (argoforge.app), a team lead for AI coding agents. Until 06/2026 I built an enterprise <b>contactless-payment SDK</b> at Grid Dynamics (EMV Level 1/2, Mastercard MCBP, Visa VCBP certified). Led teams of 3–5 engineers, set up Fastlane CI/CD (−30–50% deployment time) and introduced architectures that cut regressions by 60%.</p>
+
+<h2>Skills</h2>
+<div class="skills">
+<b>iOS</b><span>Swift 6, SwiftUI, UIKit, Objective-C, async/await, Actors, @Observable, Combine, SwiftData, Core Data</span>
+<b>Payments &amp; Security</b><span>EMV L1/L2, HCE/NFC, Mastercard MCBP, Visa VCBP, CryptoKit, Secure Enclave, Keychain, App Attest, PassKit, ixGuard</span>
+<b>Cross-platform</b><span>Kotlin Multiplatform, Kotlin 2.2, Jetpack Compose, Ktor, Koin, Coroutines</span>
+<b>Backend</b><span>C# / .NET, ASP.NET Core, PostgreSQL, Elixir / Phoenix LiveView, Stripe, REST, OpenAPI</span>
+<b>Architecture</b><span>Clean Architecture, MVVM, VIP / VIPER, multi-module SDKs, protocol-oriented design, SOLID, custom DI</span>
+<b>Delivery</b><span>Fastlane, XcodeGen, SwiftLint, Sourcery, GitHub Actions, Jenkins, Artifactory, Firebase</span>
+<b>Testing</b><span>swift-testing, XCTest, Cucumber / Gherkin BDD, Appium, unit and integration testing</span>
+<b>AI engineering</b><span>Claude Code, Codex, multi-agent workflows, custom skills, hooks, MCP, Cline, Aider, Copilot</span>
+</div>
+
+<h2>Experience</h2>
+
+<div class="job" style="margin-top:0">
+<div class="head"><div class="title">Founder · <i>Argoforge</i></div><div class="date">2026 – Present</div></div>
+<div class="sub">argoforge.app · a team lead for AI coding agents (Claude Code, Codex) · macOS app + server, Starter / Pro / Team plans</div>
+<ul>
+<li>Layer on top of Claude Code and Codex: turns an agent's repeated mistakes into rules and brings each into the turn that needs it, sizes the task and picks the subagent team; the user's code stays on their Mac</li>
+<li>10 modules with self-tests: Node.js server with accounts and plans, hooks for Claude Code, a native <b>SwiftUI macOS menu-bar app</b></li>
+</ul>
+<div class="tags">Node.js · SwiftUI (macOS) · Claude Code hooks &amp; skills · MCP</div>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">Founder · Lead Mobile Engineer · <i>VisiTime</i></div><div class="date">08/2023 – Present</div></div>
+<div class="sub">Booking marketplace for barbershops and beauty salons, visitime.net</div>
+<ul>
+<li>Built four native apps — Client and Business for <b>iOS (SwiftUI)</b> and <b>Android (Jetpack Compose)</b> — on a shared <b>Kotlin Multiplatform</b> core with Ktor and Koin; author of ~1,400 of 1,700+ mobile commits</li>
+<li>Co-developed the backend with a partner: <b>ASP.NET Core (.NET 10)</b> REST API on PostgreSQL, <b>Elixir / Phoenix LiveView</b> web, partner and admin portals, Stripe subscriptions, GitHub Actions CI</li>
+<li>Run development through an AI agent pipeline on Claude Code — PM → Architect → Backend / iOS / Android → Review → QA — with Linear as the task queue and human gates at planning and acceptance</li>
+<li>Maintain the product's design system and screen specifications as a living documentation vault</li>
+</ul>
+<div class="tags">Swift · SwiftUI · Kotlin 2.2 · Compose · KMM · Ktor · Koin · .NET 10 · PostgreSQL · Elixir · Phoenix · Stripe · Fastlane</div>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">Senior iOS Developer · <i>Grid Dynamics</i></div><div class="date">05/2024 – 06/2026</div></div>
+<div class="sub">iOS Payment SDK — enterprise SDK for contactless mobile payments (Visa)</div>
+<ul>
+<li>Implemented Host Card Emulation (HCE) for NFC payments with Mastercard MCBP and Visa VCBP</li>
+<li>Built a full EMV kernel: TLV / BER-TLV parsing, APDU commands, cryptograms, ODA, CVM</li>
+<li>Implemented RSA (CRT-optimised), AES, SHA-256/512, HMAC, JWE/JWS; keys in Secure Enclave and Keychain</li>
+<li>Architected a multi-module SDK (private Core + public Shared API + Demo app) on MVVM + Clean Architecture with a custom property-wrapper DI container</li>
+<li>Fastlane pipeline for XCFramework builds, signing, Artifactory publishing; ixGuard obfuscation and integrity checks</li>
+<li><b>280+ unit tests</b> (swift-testing) plus Cucumber BDD certification suites; obtained <b>EMV L1/L2, MCBP and VCBP</b> certification</li>
+<li>Introduced AI-assisted development to the team: custom Claude Code skills and agents</li>
+</ul>
+<div class="tags">Swift 5.10 · iOS 15+ · SwiftUI · SwiftData · CryptoKit · Secure Enclave · App Attest · Fastlane · XcodeGen · SwiftLint (80+ rules)</div>
+</div>
+</div><div class="foot">Yurii Horoshenko · CV · 1</div></div>
+
+<div class="page"><div class="inner">
+
+<div class="job" style="margin-top:0">
+<div class="head"><div class="title">Senior iOS Developer · <i>Grid Dynamics</i></div><div class="date">04/2023 – 02/2024</div></div>
+<div class="sub">Transflo — logistics and trucking platform (staff augmentation)</div>
+<ul><li>Delivered iOS features in Swift and SwiftUI inside a cross-functional client team</li></ul>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">Lead iOS Developer · <i>Grid Dynamics</i></div><div class="date">06/2022 – 03/2023</div></div>
+<div class="sub">The Container Store (e-commerce) · fuel-station app</div>
+<ul>
+<li>Led a team of 4 iOS developers, mentored junior engineers; SwiftUI adoption sped up delivery by ~30%</li>
+<li>Introduced VIP architecture — <b>−60% application errors</b>; integrated Stripe payments</li>
+<li>Set up Fastlane, XcodeGen and SwiftLint (100+ rules); led ARKit / SceneKit features</li>
+</ul>
+<div class="tags">Swift · SwiftUI · VIP · KMM · ARKit · SceneKit · Core Data · Firebase · Stripe</div>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">Lead iOS Developer · <i>Tranzzo</i></div><div class="date">06/2020 – 02/2022</div></div>
+<div class="sub">OxiBank — banking application</div>
+<ul>
+<li>Integrated PassKit digital-wallet support and NFC card flows</li>
+<li>Automated releases with Fastlane — <b>−50% deployment time</b></li>
+<li>Mentored 3 junior engineers; groomed backlog and planned sprints with product owners</li>
+</ul>
+<div class="tags">Swift · SwiftUI · VIP · Core Data · Firebase · IGListKit · PassKit · NFC</div>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">Lead iOS Developer · <i>Lalafo</i></div><div class="date">10/2018 – 05/2020</div></div>
+<div class="sub">Classifieds marketplace</div>
+<ul>
+<li>Performance work on a legacy codebase — <b>−25% API response time</b></li>
+<li>Reactive data flows with RxSwift / ReactiveCocoa and Realm; code reviews; 8 on-time feature releases</li>
+</ul>
+<div class="tags">Swift · MVVM-C · RxSwift · Realm · Firebase · MapKit · Moya</div>
+</div>
+
+<div class="job">
+<div class="head"><div class="title">iOS Developer (Junior → Senior) · <i>Infopulse · Digicode · Mobisoft · Genesis · BoostSolutions</i></div><div class="date">04/2011 – 09/2018</div></div>
+<div class="sub">Dating, parental control &amp; family locator, live-streaming auction, veterinary clinic apps</div>
+<ul>
+<li>Migrated codebases from Objective-C to Swift; interactive animations with Core Animation and UIKit Dynamics</li>
+<li>Integrated Wowza live streaming, Twilio, XMPP chat, WebRTC and Realm; estimated and delivered projects for 4 clients</li>
+</ul>
+<div class="tags">Objective-C · Swift · MVC / MVVM / VIPER · Core Animation · Core Location · Realm · Firebase</div>
+</div>
+
+<h2>Selected Apps</h2>
+<p>VisiTime · Transflo · The Container Store · OxiBank · Lalafo · Hily · Vethem · Kidgy · PlsPlsMe · Live Auction · Stroovy</p>
+
+<h2>Education &amp; Languages</h2>
+<div class="two">
+<div><b>Education</b><span>Specialist, Applied Informatics (Physics, Mathematics and Informatics)</span><div class="dim">Kherson State University · 2004 – 2008</div></div>
+<div><b>Languages</b><span>English — B2</span><br><span>Ukrainian — native</span><br><span>Russian — native</span></div>
+</div>
+</div><div class="foot">Yurii Horoshenko · CV · 2</div></div>
+</body></html>

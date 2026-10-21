@@ -6,3 +6,9 @@ CLAUDE.md
 .claudeignore
 .claude/
 .legion/
+
+# career-ops: personal job-search workspace (own git clone, private data)
+career-ops/
+
+# ai-job-search: second job-search workspace (own git clone, private data after /setup)
+ai-job-search/

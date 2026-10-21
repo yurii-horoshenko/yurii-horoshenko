@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Где показывается резюме</title>
+<style>
+  :root { --bg:#fff; --fg:#111827; --muted:#6b7280; --accent:#4f46e5; --line:#e5e7eb; --ok:#15803d; --warn:#b45309; --no:#b91c1c; --unk:#6b7280; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#8b949e; --accent:#818cf8; --line:#30363d; --ok:#3fb950; --warn:#d29922; --no:#f85149; --unk:#8b949e; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 -apple-system, system-ui, sans-serif; }
+  main { max-width:900px; margin:0 auto; padding:32px 16px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin:32px 0 8px; }
+  p.sub { color:var(--muted); margin:0; }
+  p.note { color:var(--muted); font-size:13px; margin:8px 0 0; }
+  a { color:var(--fg); font-weight:600; text-decoration:none; }
+  a:hover { color:var(--accent); }
+  .legend { display:flex; flex-wrap:wrap; gap:6px 18px; margin:16px 0 0; font-size:13px; color:var(--muted); }
+  .scroll { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:14px; min-width:560px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; }
+  td.m { width:90px; white-space:nowrap; font-weight:700; }
+  td.fn { font-weight:600; width:32%; }
+  td.why { color:var(--muted); font-size:13px; }
+  .ok { color:var(--ok); } .warn { color:var(--warn); } .no { color:var(--no); } .unk { color:var(--unk); }
+  ul.need { margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Где показывается резюме</h1>
+<p class="sub">Выход: каналы, куда я могу выкладывать резюме и посты · зеркало <a href="../job-search/job-sources.html">job-sources.html</a> (вход: где искать вакансии)</p>
+<p class="note">Состояние на 2026-10-21. «Могу» значит, что это подтверждено либо мной на деле, либо документацией; всё остальное помечено отдельно.</p>
+
+<div class="legend">
+  <span><b class="ok">✅</b> можно</span>
+  <span><b class="warn">⚠️</b> технически возможно, но с риском или условием</span>
+  <span><b class="no">❌</b> нельзя</span>
+  <span><b class="unk">❓</b> не проверено</span>
+</div>
+<p class="note">Колонка «API» — официальный доступ с ключами. Колонка «Браузер» — я управляю окном браузера, в котором вы вошли сами. Для LinkedIn и Instagram это нарушает условия сервиса и может вызвать проверку или блокировку аккаунта; каждое публичное действие только после вашего «да» на конкретном тексте.</p>
+
+<h2>Состояние доступов</h2>
+<div class="scroll"><table>
+<thead><tr><th>Канал</th><th>Доступ</th><th>Где хранится</th><th>Статус</th><th>Что осталось</th></tr></thead>
+<tbody>
+<tr><td class="fn">LinkedIn · API</td><td class="why">Приложение разработчика с продуктами «Share on LinkedIn» и «Sign in with LinkedIn (OpenID)»; токен на права <code>openid</code>, <code>profile</code>, <code>w_member_social</code>.</td><td class="why">Связка ключей macOS (<code>linkedin-access-token</code>). В файлах и чате не хранится.</td><td class="m ok">✅ чтение</td><td class="why">Проверено 2026-10-21: запрос <code>/v2/userinfo</code> вернул HTTP 200. <b>Публикацию ещё не проверял</b>, есть ли в токене <code>w_member_social</code>, покажет первый тестовый пост. Токен живёт 60 дней (до ~2026-12-20), потом новый вход через генератор токенов.</td></tr>
+<tr><td class="fn">Instagram · API</td><td class="why">Приложение Meta с сценарием «Instagram API» (вход через Instagram); в приложении добавлены права <code>instagram_business_basic</code> и <code>instagram_business_content_publish</code>, статус «Готово к тестированию».</td><td class="why">Связка ключей macOS (<code>instagram-access-token</code>). В файлах и чате не хранится.</td><td class="m ok">✅ чтение</td><td class="why">Проверено 2026-10-21: запрос профиля вернул HTTP 200 (тип аккаунта «креатор»), запрос лимита публикаций тоже HTTP 200 (0 из 100 за сутки), значит право на публикацию в токене есть. <b>Саму публикацию ещё не проверял</b>: нужна картинка JPEG по публичной ссылке. Токен живёт 60 дней (до ~2026-12-20).</td></tr>
+<tr><td class="fn">LinkedIn и Instagram · браузер</td><td class="why">Вход выполняет владелец в окне, которым я управляю. Пароли я не вижу и не храню.</td><td class="why">Сессия только в окне браузера.</td><td class="m warn">⚠️ по запросу</td><td class="why">Нарушает условия сервисов. Каждое публичное действие только после «да» на конкретном тексте.</td></tr>
+<tr><td class="fn">TikTok · API</td><td class="why">Не настроено. Нужны приложение на TikTok for Developers, продукт Content Posting API (Direct Post), право <code>video.publish</code> и токен после вашего согласия.</td><td class="why">Токена нет.</td><td class="m unk">❓ не начато</td><td class="why">Без аудита приложения все посты публикуются только приватно, на закрытом аккаунте. Публичная публикация требует проверки TikTok. Только видео и фото, текстовых постов нет.</td></tr>
+<tr><td class="fn">GitHub</td><td class="why">Авторизованный <code>gh</code> и <code>git push</code> на профильный репозиторий.</td><td class="why">Системная авторизация <code>gh</code>.</td><td class="m ok">✅</td><td class="why">Публикации проверены 2026-10-21. Пуш делаю только по вашей просьбе.</td></tr>
+</tbody></table></div>
+<p class="note">Токены и ключи в эту страницу не попадают, только где они лежат. Эта же страница лежит в публичном репозитории, поэтому идентификаторы приложений здесь тоже не указаны.</p>
+
+<h2>LinkedIn · личный профиль</h2>
+<div class="scroll"><table>
+<thead><tr><th>Функция</th><th>API</th><th>Браузер</th><th>Пояснение</th></tr></thead>
+<tbody>
+<tr><td class="fn">Публиковать посты</td><td class="m ok">✅</td><td class="m warn">⚠️</td><td class="why">API: продукт «Share on LinkedIn», право <code>w_member_social</code>, открыт всем разработчикам. Приложение уже есть и привязано к странице компании VisiTime, токен сохранён. Пост выходит в личный профиль. Публикацию ещё не пробовал.</td></tr>
+<tr><td class="fn">Комментировать и лайкать</td><td class="m ok">✅</td><td class="m warn">⚠️</td><td class="why">То же право <code>w_member_social</code>.</td></tr>
+<tr><td class="fn">Менять шапку (headline)</td><td class="m no">❌</td><td class="m warn">⚠️</td><td class="why">Profile Edit API ограничен разработчиками, одобренными LinkedIn.</td></tr>
+<tr><td class="fn">Менять About и опыт</td><td class="m no">❌</td><td class="m warn">⚠️</td><td class="why">Тот же Profile Edit API.</td></tr>
+<tr><td class="fn">Менять фото и фон профиля</td><td class="m no">❌</td><td class="m warn">⚠️</td><td class="why">Нужно право <code>w_compliance</code>, оно закрыто и не выдаётся по запросу.</td></tr>
+<tr><td class="fn">Писать в личные сообщения</td><td class="m no">❌</td><td class="m unk">❓</td><td class="why">Среди открытых прав API сообщений нет (только <code>profile</code>, <code>email</code>, <code>w_member_social</code>). Через браузер не проверял.</td></tr>
+<tr><td class="fn">Читать свой профиль</td><td class="m warn">⚠️</td><td class="m warn">⚠️</td><td class="why">API по праву <code>profile</code> отдаёт только имя, шапку и фото. Проверено 2026-10-21: HTTP 200.</td></tr>
+</tbody></table></div>
+<ul class="need">
+  <li>Для постов по API: приложение на <a href="https://www.linkedin.com/developers/apps">linkedin.com/developers/apps</a> со страницей компании (не личным профилем), продукты «Share on LinkedIn» и «Sign in with LinkedIn using OpenID Connect».</li>
+  <li>Client Secret и токен лежат только в связке ключей macOS, не в чате и не в файлах.</li>
+  <li>Правка профиля идёт только через браузер, без API.</li>
+</ul>
+
+<h2>Instagram</h2>
+<p class="note">Аккаунт у вас профессиональный (креатор) и подключён к приложению, поэтому публикация и чтение по API доступны (✅). Био, ссылка и фото профиля по API по-прежнему не меняются (❌). Строки про био и фото относятся к любому типу аккаунта.</p>
+<div class="scroll"><table>
+<thead><tr><th>Функция</th><th>API</th><th>Браузер</th><th>Пояснение</th></tr></thead>
+<tbody>
+<tr><td class="fn">Публиковать посты</td><td class="m ok">✅</td><td class="m warn">⚠️</td><td class="why">API: только профессиональный аккаунт (бизнес, креатор); у вас креатор. Права в приложении добавлены, аккаунт подключён, токен сохранён, право на публикацию проверено запросом лимита (публикацию не пробовал). Только картинка или видео, текстовых постов нет; картинка JPEG по публичной ссылке.</td></tr>
+<tr><td class="fn">Менять био и ссылку</td><td class="m no">❌</td><td class="m warn">⚠️</td><td class="why">Био и сайт API только читает, записи в документации не нашёл.</td></tr>
+<tr><td class="fn">Менять фото профиля</td><td class="m no">❌</td><td class="m warn">⚠️</td><td class="why">Эндпоинта для этого не нашёл.</td></tr>
+<tr><td class="fn">Писать в личные сообщения</td><td class="m unk">❓</td><td class="m unk">❓</td><td class="why">Для профессионального аккаунта в API есть право <code>instagram_business_manage_messages</code> (оно было в запросе согласия), но в приложение я его не добавлял и не проверял. Через браузер не проверял.</td></tr>
+<tr><td class="fn">Читать свой профиль</td><td class="m ok">✅</td><td class="m warn">⚠️</td><td class="why">API: только профессиональный аккаунт, право <code>instagram_business_basic</code>. Проверено 2026-10-21: запрос профиля вернул HTTP 200.</td></tr>
+</tbody></table></div>
+<ul class="need">
+  <li>Токен Instagram живёт 60 дней (до ~2026-12-20); по документации Meta его можно продлевать запросом обновления, я этого не проверял.</li>
+</ul>
+
+<h2>TikTok</h2>
+<p class="note">По документации TikTok Content Posting API. Пока ничего не настроено и не проверено.</p>
+<div class="scroll"><table>
+<thead><tr><th>Функция</th><th>API</th><th>Браузер</th><th>Пояснение</th></tr></thead>
+<tbody>
+<tr><td class="fn">Публиковать видео и фото</td><td class="m warn">⚠️</td><td class="m unk">❓</td><td class="why">Direct Post, право <code>video.publish</code>. До аудита приложения всё публикуется только приватно (<code>SELF_ONLY</code>), аккаунт на момент публикации должен быть закрытым; у неаудированного приложения до 5 пользователей в сутки. Фото принимаются только по ссылке с подтверждённого домена.</td></tr>
+<tr><td class="fn">Публиковать текстовые посты</td><td class="m no">❌</td><td class="m no">❌</td><td class="why">В TikTok нет текстовых постов.</td></tr>
+<tr><td class="fn">Менять био, ссылку, фото профиля</td><td class="m no">❌</td><td class="m unk">❓</td><td class="why">Методов для этого в документации публикации не нашёл.</td></tr>
+<tr><td class="fn">Писать в личные сообщения</td><td class="m no">❌</td><td class="m unk">❓</td><td class="why">В Content Posting API нет. Через браузер не проверял.</td></tr>
+</tbody></table></div>
+<ul class="need">
+  <li>Для публичных постов нужен аудит приложения у TikTok (форма с описанием использования); сроки и результат не гарантированы.</li>
+  <li>Для резюме и поиска работы канал малополезен: нужны видео.</li>
+</ul>
+
+<h2>GitHub · профиль yurii-horoshenko</h2>
+<div class="scroll"><table>
+<thead><tr><th>Функция</th><th>API / git</th><th>Браузер</th><th>Пояснение</th></tr></thead>
+<tbody>
+<tr><td class="fn">Менять README профиля</td><td class="m ok">✅</td><td class="m unk">❓</td><td class="why">Сделано 2026-10-21 коммитами <code>b1e684f</code> и <code>74fa0e4</code> через <code>git push</code>.</td></tr>
+<tr><td class="fn">Обновлять CV (PDF и HTML)</td><td class="m ok">✅</td><td class="m unk">❓</td><td class="why">PDF пересобран из <code>cv-source/cv.html</code> и опубликован тем же коммитом.</td></tr>
+<tr><td class="fn">Менять bio и ссылки в профиле</td><td class="m unk">❓</td><td class="m unk">❓</td><td class="why">Через <code>gh api</code> теоретически можно, не проверял.</td></tr>
+<tr><td class="fn">Писать в личные сообщения</td><td class="m no">❌</td><td class="m no">❌</td><td class="why">В GitHub личных сообщений нет.</td></tr>
+</tbody></table></div>
+<ul class="need">
+  <li>Пуш на GitHub делаю только по вашей просьбе: репозиторий публичный.</li>
+  <li>Личные данные (шортлист вакансий, клоны <code>career-ops</code> и <code>ai-job-search</code>) в коммиты не попадают, см. <code>.gitignore</code>.</li>
+</ul>
+
+<h2>Источники</h2>
+<ul class="need">
+  <li><a href="https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access">LinkedIn: Getting Access to APIs</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/linkedin/shared/integrations/people/profile-edit-api">LinkedIn: Profile Edit API</a></li>
+  <li><a href="https://developers.facebook.com/docs/instagram-platform/overview/">Instagram Platform overview</a></li>
+  <li><a href="https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user">Instagram: IG User</a></li>
+  <li><a href="https://developers.tiktok.com/doc/content-posting-api-get-started">TikTok: Content Posting API</a></li>
+  <li><a href="https://developers.tiktok.com/docs/en/content-sharing-guidelines">TikTok: Content Sharing Guidelines</a></li>
+</ul>
+</main>
+</body>
+</html>

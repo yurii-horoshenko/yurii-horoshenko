@@ -190,17 +190,6 @@ flowchart LR
 
 <sub>Also: Kidgy (parental control), PlsPlsMe (couples), Live Auction (streaming), Stroovy (dating reviews).</sub>
 
-## 📊 GitHub stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=yurii-horoshenko&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yurii-horoshenko&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"/>
-
-<img src="https://streak-stats.demolab.com?user=yurii-horoshenko&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
-
-</div>
-
 ---
 
 <div align="center">
